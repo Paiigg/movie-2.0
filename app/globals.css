@@ -17,10 +17,27 @@ body {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  overflow: hidden;
 
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+  @apply rounded-lg;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-family: swiper-icons;
+  font-size: 10px !important;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+
+  @apply hidden p-4 text-sm font-bold text-white rounded-lg bg-secondary/20 md:block;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: yellow !important;
 }
